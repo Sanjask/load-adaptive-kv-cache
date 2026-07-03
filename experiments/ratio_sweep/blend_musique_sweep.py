@@ -50,7 +50,7 @@ for ex_idx, ex in enumerate(eval_dataset):
     doc_chunk_ids = [s_start_full] + doc_chunk_ids
     doc_chunk_ids = doc_chunk_ids + [s_start + q_ids + s_end]
 
-    last_len = len([q_ids + s_end])
+    last_len = len(q_ids + s_end)
 
     # ---------- PHASE 1: collect KVs ONCE per example (ratio-independent) ----------
     cache_fuse_metadata['collect'] = True
